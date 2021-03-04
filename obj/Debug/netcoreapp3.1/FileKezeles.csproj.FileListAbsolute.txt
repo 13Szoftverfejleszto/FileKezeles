@@ -1,0 +1,13 @@
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\bin\Debug\netcoreapp3.1\FileKezeles.exe
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\bin\Debug\netcoreapp3.1\FileKezeles.deps.json
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\bin\Debug\netcoreapp3.1\FileKezeles.runtimeconfig.json
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\bin\Debug\netcoreapp3.1\FileKezeles.runtimeconfig.dev.json
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\bin\Debug\netcoreapp3.1\FileKezeles.dll
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\bin\Debug\netcoreapp3.1\FileKezeles.pdb
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\obj\Debug\netcoreapp3.1\FileKezeles.csprojAssemblyReference.cache
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\obj\Debug\netcoreapp3.1\FileKezeles.AssemblyInfoInputs.cache
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\obj\Debug\netcoreapp3.1\FileKezeles.AssemblyInfo.cs
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\obj\Debug\netcoreapp3.1\FileKezeles.csproj.CoreCompileInputs.cache
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\obj\Debug\netcoreapp3.1\FileKezeles.dll
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\obj\Debug\netcoreapp3.1\FileKezeles.pdb
+D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\obj\Debug\netcoreapp3.1\FileKezeles.genruntimeconfig.cache
