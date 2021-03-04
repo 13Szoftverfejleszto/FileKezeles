@@ -11,27 +11,11 @@ namespace FileKezeles
         {
             Console.Clear();
 
-            string beolvasFile = @"D:\JavaScript\Online_Tanitas\SOB\13SZFT\Asztali alkalmazasok\FileKezeles\hegyekMo.txt";
-            string elsoSor = "";
-            List<Hegy> hegyLista = new List<Hegy>();
+            string beolvasFile = "hegyekMo.txt";
+            FileBeolvas fileHegy = new FileBeolvas(beolvasFile); 
 
-            using (StreamReader sr = new StreamReader(beolvasFile, Encoding.UTF8))
-            {
-                elsoSor = sr.ReadLine();
-                while (!sr.EndOfStream)
-                {
-                    // Trim() eltávolítja a sor végeiről a whitespace: \t,\n,' ', " "
-                    string sor = sr.ReadLine().Trim();
-                    string[] tomb = sor.Split(';');
-                    string hegycsucsNeve = tomb[0];
-                    string hegyseg = tomb[1];
-                    int magassag = Int32.Parse(tomb[2]);
-                    Hegy hegy = new Hegy(hegycsucsNeve, hegyseg, magassag);
-                    hegyLista.Add(hegy);
-                }
-            }
-
-            Console.WriteLine(elsoSor);
+            fileHegy.Feltoltes(';');
+            Console.WriteLine(FileBeolvas.HegyLista.Count);
         }
     }
 }

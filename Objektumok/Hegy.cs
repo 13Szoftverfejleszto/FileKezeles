@@ -1,3 +1,5 @@
+using System;
+
 namespace FileKezeles
 {
     public class Hegy 
@@ -8,11 +10,11 @@ namespace FileKezeles
         public int Magassag { get; set; }
 
         // Teljes konstruktor
-        public Hegy(string hegycsucsNeve, string hegyseg, int magassag)
+        public Hegy(string hegycsucsNeve, string hegyseg, string magassag)
         {
             this.HegycsucsNeve = hegycsucsNeve;
             this.Hegyseg = hegyseg;
-            this.Magassag = magassag;
+            this.Magassag = Int32.Parse(magassag);
         }
 
     }
