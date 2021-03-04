@@ -11,9 +11,50 @@ namespace FileKezeles
 
             string beolvasFile = "hegyekMo.txt";
             FileBeolvas fileHegy = new FileBeolvas(beolvasFile); 
-            List<Hegy> lista = Hegy.ListaFeltoltes(FileBeolvas.Feltoltes(';'));
+            List<Hegy> hegyLista = Hegy.ListaFeltoltes(FileBeolvas.Feltoltes(';'));
 
-            Console.WriteLine(lista.Count);
+            Console.WriteLine($"3. feladat: Hegycsúcsok száma: {hegyLista.Count} db");
+
+            double atlagMagassag = (double) Hegy.osszMagassag / hegyLista.Count;
+            Console.WriteLine($"4. feladat: A hegycsúcsok átlagos magassága: {atlagMagassag:F2} m");
+
+            Hegy legmagasabb = Hegy.LegmagasabbHegy;
+            Console.WriteLine($"5. feladat: A legmagasabb hegycsúcs adatai: ");
+            Console.WriteLine($"\tNév: {legmagasabb.HegycsucsNeve}");
+            Console.WriteLine($"\tHegység: {legmagasabb.Hegyseg}");
+            Console.WriteLine($"\tMagasság: {legmagasabb.Magassag} m");
+
+            Console.Write("6. feladat: Kérek egy magasságot: ");
+            int bekertMagassag = Int32.Parse(Console.ReadLine());
+            bool vanE = false;
+
+            foreach (Hegy elem in hegyLista)
+            {
+                if (elem.Hegyseg == "Börzsöny" && elem.Magassag > bekertMagassag)
+                {
+                    vanE = true;
+                    break;
+                }
+            }
+
+            if (vanE)
+            {
+                Console.WriteLine($"\tVan {bekertMagassag}m-nél magasabb hegycsúcs a Börzsönyben.");
+            }
+            else
+            {
+                Console.WriteLine($"\tNincs {bekertMagassag}m-nél magasabb hegycsúcs a Börzsönyben.");
+
+            }
+
+            Console.WriteLine($"7. feladat: 3000 lábnál magasabb hegycsúcsok száma: {Hegy.haromEzerLab}");
+
+            Console.WriteLine("8. feladat: Hegység statisztika");
+            Dictionary<string, int> statisztika = Hegy.statisztika;
+            foreach(KeyValuePair<string, int> elem in statisztika)
+            {
+                Console.WriteLine($"\t{elem.Key} - {elem.Value} db");
+            }
         }
     }
 }
