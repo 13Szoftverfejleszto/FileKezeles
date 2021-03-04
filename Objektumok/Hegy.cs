@@ -24,8 +24,9 @@ namespace FileKezeles
             this.HegycsucsNeve = hegycsucsNeve;
             this.Hegyseg = hegyseg;
             this.Magassag = Int32.Parse(magassag);
-            Hegy.osszMagassag += this.Magassag;
 
+            // Feladatokhoz    
+            Hegy.osszMagassag += this.Magassag;
             this.LegmagasabbHegySzamol();
             this.HaromEzerLabSzamolas(); 
             this.StatiszkaGyartas();         

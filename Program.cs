@@ -9,9 +9,8 @@ namespace FileKezeles
         {
             Console.Clear();
 
-            string beolvasFile = "hegyekMo.txt";
-            FileBeolvas fileHegy = new FileBeolvas(beolvasFile); 
-            List<Hegy> hegyLista = Hegy.ListaFeltoltes(FileBeolvas.Feltoltes(';'));
+            FileBeolvas fileHegy = new FileBeolvas("hegyekMo.txt"); 
+            List<Hegy> hegyLista = Hegy.ListaFeltoltes(fileHegy.Feltoltes(';'));
 
             Console.WriteLine($"3. feladat: Hegycsúcsok száma: {hegyLista.Count} db");
 
@@ -55,6 +54,25 @@ namespace FileKezeles
             {
                 Console.WriteLine($"\t{elem.Key} - {elem.Value} db");
             }
+
+            Console.WriteLine("9. feladat: bukk-videk.txt");
+
+            string kiir = "Hegycsúcs neve;Magasság láb";
+
+            foreach (Hegy elem in hegyLista)
+            {
+                if (elem.Hegyseg == "Bükk-vidék")
+                {
+                    kiir += $"\n{elem.HegycsucsNeve};";
+                    double lMagassag = elem.Magassag * 3.280839895;
+                    
+                    string magas = lMagassag.ToString("F1").Replace(",",".").Replace(".0","");
+                    kiir += magas;
+                }
+            }
+
+            FilebaKiir bukkText = new FilebaKiir("bukk-videk.txt");
+            bukkText.Kiiras(kiir);
         }
     }
 }

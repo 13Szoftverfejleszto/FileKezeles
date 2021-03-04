@@ -6,21 +6,19 @@ namespace FileKezeles
 {
     class FileBeolvas
     { 
-        // Osztályszintű mező
-        static string File = "";
+        public string File { get; set; }   
         
-        // Konstruktor
         public FileBeolvas(string fileNev)
         {
-            FileBeolvas.File = fileNev;
+            this.File = fileNev;
         }
 
-        static public List<string[]> Feltoltes(char delimiter)
+        public List<string[]> Feltoltes(char delimiter)
         {
             string elsoSor = "";
             List<string[]> lista = new List<string[]>();
 
-            using (StreamReader sr = new StreamReader(FileBeolvas.File, Encoding.UTF8))  
+            using (StreamReader sr = new StreamReader(this.File, Encoding.UTF8))  
             {
                 elsoSor = sr.ReadLine();
 
