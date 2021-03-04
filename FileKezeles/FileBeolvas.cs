@@ -5,24 +5,22 @@ using System.Text;
 namespace FileKezeles 
 {
     class FileBeolvas
-    {
-        // Osztályszintű property
-        static public List<Hegy> HegyLista = new List<Hegy>(); 
-
-        // Példányszintű property
-        public string FileNev { get; set; }
+    { 
+        // Osztályszintű mező
+        static string File = "";
         
         // Konstruktor
         public FileBeolvas(string fileNev)
         {
-            this.FileNev = fileNev;
+            FileBeolvas.File = fileNev;
         }
 
-        public void Feltoltes(char delimiter)
+        static public List<string[]> Feltoltes(char delimiter)
         {
             string elsoSor = "";
+            List<string[]> lista = new List<string[]>();
 
-            using (StreamReader sr = new StreamReader(this.FileNev, Encoding.UTF8))  
+            using (StreamReader sr = new StreamReader(FileBeolvas.File, Encoding.UTF8))  
             {
                 elsoSor = sr.ReadLine();
 
@@ -30,10 +28,11 @@ namespace FileKezeles
                 {
                     string sor = sr.ReadLine().Trim();
                     string[] tomb = sor.Split(delimiter);
-                    Hegy hegy = new Hegy(tomb[0], tomb[1], tomb[2]);
-                    FileBeolvas.HegyLista.Add(hegy);
+                    lista.Add(tomb);
                 }
             }
+
+            return lista;
         }
     }
 }

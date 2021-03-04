@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Text;
-using System.IO;
 using System.Collections.Generic;
 
 namespace FileKezeles
@@ -13,9 +11,9 @@ namespace FileKezeles
 
             string beolvasFile = "hegyekMo.txt";
             FileBeolvas fileHegy = new FileBeolvas(beolvasFile); 
+            List<Hegy> lista = Hegy.ListaFeltoltes(FileBeolvas.Feltoltes(';'));
 
-            fileHegy.Feltoltes(';');
-            Console.WriteLine(FileBeolvas.HegyLista.Count);
+            Console.WriteLine(lista.Count);
         }
     }
 }
